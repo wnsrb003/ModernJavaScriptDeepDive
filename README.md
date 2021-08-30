@@ -32,3 +32,5 @@ a.deref();
 > 변수 이름 제한\
 숫자 시작, - 포함, 예약어(this,var등등)
 
+> falsy \
+falsy data : 0, '', null, undefined, false, NaN
