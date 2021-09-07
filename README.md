@@ -1,7 +1,7 @@
 # ModernJavaScriptDeepDive
 모던자바스크립트 Deep Dive 책 스터디
 
-## 4장
+## 정리
 > 변수 
 1. 메모리 공간
 2. 식별자(고유의 이름)
@@ -36,3 +36,10 @@ a.deref();
 > falsy
 > 
 falsy data : 0, '', null, undefined, false, NaN
+
+> 변수 형
+
+const 기본으로 데이터 변경 필요시에만 let 사용(거의 대부분 const 사용하여 개발 가능)
+
+> 실행 컨테스트
+
