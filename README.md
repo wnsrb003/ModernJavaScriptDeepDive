@@ -49,3 +49,18 @@ const 기본으로 데이터 변경 필요시에만 let 사용(거의 대부분 
 
 > 실행 컨테스트
 
+
+> 메소드
+메소드는 자신을 바인딩한 객체를 가르키는 내부 슬롯을 가지고 그것으로 super 가능
+
+> 화살표 함수
+```
+const arrow = (x,y) => x*y;
+const mul = () => { return (x*y) };
+```
+```
+[1,2,3].map(v => v * 2);  //[1,2,3].map(function(v) { return v*2;} 의 ES6 화살표 함수 표현
+const redux = dispatch => action => action.dispatch(next(action)); //이런 식의 연속되게 가능
+```
+단, 중복되는 변수는 사용 금지 ( const x = (a,a) => (a*a) //에러 )
+
