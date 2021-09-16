@@ -64,3 +64,17 @@ const redux = dispatch => action => action.dispatch(next(action)); //이런 식�
 ```
 단, 중복되는 변수는 사용 금지 ( const x = (a,a) => (a*a) //에러 )
 
+> 배열
+희소배열 = [, 1, , 3] -> 희소배열의 길이는 실제 요소 개수 보다 많다. 사용 권장하지 않음\
+원본 배열을 직접 변경하는 메소드와 원본 배열을 변경하지 않고 새로 생성하는 메소드가 있다. -> 배열 관련 함수를 사용할 때 필히 확인
+```
+a.push() -> 원본 배열 변경
+a.concat() -> 새로 생성
+```
+unshift -> 앞에 밀어넣기 / shift -> 앞에 제거    // splice로 사용 권장\
+
+splice -> arr.splice('start', 'count', 'items') -> 배열 제거를 시작할 인덱스, 제거할 개수, 삽입할 요소
+
+
+
+
