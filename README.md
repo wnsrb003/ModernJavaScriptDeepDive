@@ -77,6 +77,24 @@ unshift -> 앞에 밀어넣기 / shift -> 앞에 제거    // splice로 사용 �
 
 splice -> arr.splice('start', 'count', 'items') -> 배열 제거를 시작할 인덱스, 제거할 개수, 삽입할 요소
 
+> Number
 
+Number.EPSILON >> 자바 스크립트에서 오차\
+```
+0.1 + 0.2 === 0.3. > false
+isEqual(0.1+0.2, 0.3) > true
+``` 
+Number.MAX_SAFE_INTEGER >> 자바 스크립트에서 integer 의 최대 값으로 넘어가면 정상 동작이 안될 수 있음.\
+Number.MIN_SAFE_INTEGER >> 최소값
 
+> Symbol
+
+- 생성자로 생성 불가
+- 다른 값과 절대 중복되지 않는 유일무이한 값
+
+> Symbol Iterable 
+
+- Symbol.iterator라고 하는 메서드를 가지고 있는 객체
+- Symbol.iterator는 next 메서드를 가지고 있는 객체를 반환해야 함.
+- next 메서드는 {value}가 포함되어 리턴해야 함.
 
