@@ -123,3 +123,24 @@ Number.MIN_SAFE_INTEGER >> 최소값
 - Symbol.iterator는 next 메서드를 가지고 있는 객체를 반환해야 함.
 - next 메서드는 {value}가 포함되어 리턴해야 함.
 
+> promise
+
+- 비동기 함수로 reject(실패), resolve(성공) 리턴
+- 상태 정보로는 pending(대기), fulfilled(수행완료 - resolved), rejected(수행 완료 - reject)
+
+> promise 후속 처리 메서드
+
+- .then : 첫번째 콜백함수는 fulfilled 상태일 때, 호출하고 두번째는 rejected 호출
+- .catch : rejected일때만 호출
+- .finally : 성공 or 실패 상관없이 무조건 한번 호출
+
+> 마이크로태스크 큐 
+
+- 프로미스는 마이크로태스크 큐에 드로 테스크큐보다 우선순위가 높다.
+```
+setTimeout(() => console.log(1), 0);
+Promise.resolve()
+.then(() => console.log(2))
+.then(() => console.log(3))
+// 순서 2 > 3 > 1
+```
